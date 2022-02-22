@@ -28,7 +28,7 @@ function calcularEquaçao(){
     }else if(valorA.value==0){
         alert("O valor de A não pode ser igual à 0")
     }else if(delta<0){
-       txtresult.innerText=`Essa equação não possui uma solução !`
+       txtresult.innerText=`Essa equação não possui solução no campo dos reais !`
     }else if(delta==0){
         txtresult.innerHTML=`${equaçaoEscrita}
         Resposta:${totalsolucao1}. Essa equação possui apenas uma solução`
