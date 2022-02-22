@@ -1,0 +1,96 @@
+@charset "UTF-8";
+*{
+    padding: 0px;
+    margin:0px ;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header{
+    text-align: center;
+    background-color: #2d2dfc;
+    padding: 50px;
+    background-image: url(imagens/pexels-monstera-6238050\ \(1\).jpg);
+    background-position:  center;
+    background-size: cover;
+    
+}
+header h1{
+    color: white;
+    padding: 10px;
+    background-color:rgba(0, 0, 0, 0.144);
+    display: inline-block;
+
+}
+/*conteudoprincpal*/
+main{
+    max-width: 100%;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+section#anuncios{
+    height: 30vw;
+    height: 1000px;
+    background-color:rgb(202, 202, 202);
+    margin: 10px auto;
+}
+section#sectionprincipal{
+    width: 80vw;
+    margin: 10px auto;
+    
+}
+div.calculadora{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.calculadora p{
+    font-size: 1.3em;
+    margin: 10px 0px ;
+    
+    
+}
+.calculadora input{
+    padding: 5px;
+    margin: 5px;
+}
+.calculadora h2{
+    font-size: 1.9em;
+    padding: 10px;
+    color: white;
+    background-image: url(imagens/pexels-lumn-167682.jpg);
+    background-position:  center;
+    background-size: cover;
+}
+.calculadora .button{
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 100%;
+}
+.calculadora li{
+    text-align: left;
+    list-style:none;
+    font-size: 1.3em;;
+    max-width: 50%;
+}
+.calculadora ul{
+    padding: 5px;
+    width:100%;
+    display:block;
+    margin:auto;
+    columns: 2;
+    margin-top: 10px;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+    
+}
+.buttonflex{
+    
+}
+   
+

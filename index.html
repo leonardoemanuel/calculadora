@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Smart Calculator</title>
+</head>
+<body>
+    <header>
+        <h1>Calculadora inteligente</h1>
+    </header>
+    <main>
+        <section id="sectionprincipal">
+            <div class="calculadora">
+                <h2>
+                    Equação de 2º grau:
+                </h2><hr>
+                <p>Digite o valor de A:<input type="number"  id="txtvalorA"></p>
+                <p>Digite o valor de B:<input type="number"  id="txtvalorB"></p>
+                <p>Digite o valor de C:<input type="number"  id="txtvalorC"></p>
+                <input type="button" value="Calcular" class="button" onclick="calcularEquaçao()">
+               <p id="txtresultado">
+                Resposta:<br>
+               
+               </p><hr>
+            </div>
+            <div class="calculadora">
+                <h2>Potenciação</h2><hr>
+                <p>Digite a base: <input type="number"  id="txtbase"></p>
+                <p>Digite o expoente: <input type="number" id="txtexpoente"></p>
+                <input type="button" value="Calcular" class="button" onclick="calcularPotencia()">
+                <p id="txtPotenciaRes">
+                    Resposta:
+                </p><hr>
+            </div>
+            <div class="calculadora">
+                <h2>Tabuada</h2>
+                <p>Digite um número: <input type="number" id="tabuadanumber"></p>
+                <p> Inicio: <input type="number" id="tabuadaInicio" value="0" /></p>
+                <p> Fim: <input type="number" id="tabuadaFim" value="10"></p>
+                <div class="container">
+                    <input type="button" value="Subtração" class="buttonflex" onclick="subtracao()">
+                    <input type="button" value="Adição" class="buttonflex" onclick="adicao()">
+                    <input type="button" value="Divisão" class="buttonflex" onclick="divisao()">
+                    <input type="button" value="Multiplicação" class="buttonflex" onclick="multiplicacao()">
+                    <input type="button" value="Expotenciação" class="buttonflex" onclick="expotenciacao()">
+                </div>
+                <ul id="txtResTabuada">
+
+                </ul><hr>
+                    
+            </div>
+            <div class="calculadora">
+                <h2>Raiz Quadrada</h2>
+                <p>Digite um número:<input type="number"  id="txtraiz"></p>
+                <input type="button" value="Calcular" class ="button"onclick="calcularRaiz()">
+                <p id="raizRes">Resultado:</p><hr>
+            </div>
+        </section>
+       
+        
+    </main>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
