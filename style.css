@@ -1,71 +1,70 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&family=Noto+Serif+Display&display=swap');
 *{
     padding: 0px;
     margin:0px ;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Fredoka', sans-serif; 
 }
 header{
-    text-align: center;
-    background-color: #2d2dfc;
-    padding: 50px;
-    background-image: url(imagens/pexels-monstera-6238050\ \(1\).jpg);
-    background-position:  center;
-    background-size: cover;
-    
+    background-color: #c7c7c7;
+    padding: 20px;
+  
 }
 header h1{
-    color: white;
+    color: black;
     padding: 10px;
-    background-color:rgba(0, 0, 0, 0.144);
-    display: inline-block;
+    display: flex;
+    align-items: center;
 
 }
 /*conteudoprincpal*/
 main{
-    max-width: 100%;
-    margin: 20px auto;
-    display: flex;
-    flex-wrap: wrap;
-}
-section#anuncios{
-    height: 30vw;
-    height: 1000px;
-    background-color:rgb(202, 202, 202);
-    margin: 10px auto;
-}
-section#sectionprincipal{
-    width: 80vw;
-    margin: 10px auto;
+    max-width: 1200px;
+    margin: 70px auto;
     
 }
 div.calculadora{
-    width: 100%;
+    max-width: 1200px;
     text-align: center;
     margin-bottom: 40px;
+    
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #2d2dfc;
+}
+div.calculadora:nth-child(2n) h2{
+    background-color:#2ECC71;
+}
+div.calculadora:nth-child(2n){
+    border: 2px solid #2ECC71;
 }
 .calculadora p{
     font-size: 1.3em;
     margin: 10px 0px ;
-    
+    flex: 1;
     
 }
 .calculadora input{
     padding: 5px;
     margin: 5px;
+    
 }
 .calculadora h2{
     font-size: 1.9em;
     padding: 10px;
     color: white;
-    background-image: url(imagens/pexels-lumn-167682.jpg);
-    background-position:  center;
-    background-size: cover;
+    background-color: #2d2dfc;
 }
 .calculadora .button{
     display: block;
     margin: 10px auto;
     padding: 10px;
-    width: 100%;
+    width: 90%;
+    
+    border-radius: 30px;
+    border: none;
+    font-size: 1.3em;
+    background-color: #c7c7c7;
 }
 .calculadora li{
     text-align: left;
@@ -91,6 +90,10 @@ div.calculadora{
 }
 .buttonflex{
     flex: 1;
+    border-radius: 30px;
+    border: none;
+    font-size: 1.3em;
+    background-color: #c7c7c7;
 }
    
 

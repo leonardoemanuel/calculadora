@@ -9,31 +9,31 @@
 </head>
 <body>
     <header>
-        <h1>Calculadora inteligente</h1>
+        <h1>Calculadora<img src="imagens/icons8-calculadora-50.png" ></h1>
     </header>
     <main>
-        <section id="sectionprincipal">
+        
             <div class="calculadora">
                 <h2>
                     Equação de 2º grau:
-                </h2><hr>
+                </h2>
                 <p>Digite o valor de A:<input type="number"  id="txtvalorA"></p>
                 <p>Digite o valor de B:<input type="number"  id="txtvalorB"></p>
                 <p>Digite o valor de C:<input type="number"  id="txtvalorC"></p>
                 <input type="button" value="Calcular" class="button" onclick="calcularEquaçao()">
                <p id="txtresultado">
-                Resposta:<br>
+                <br>
                
-               </p><hr>
+               </p>
             </div>
             <div class="calculadora">
-                <h2>Potenciação</h2><hr>
+                <h2>Potenciação</h2>
                 <p>Digite a base: <input type="number"  id="txtbase"></p>
                 <p>Digite o expoente: <input type="number" id="txtexpoente"></p>
                 <input type="button" value="Calcular" class="button" onclick="calcularPotencia()">
                 <p id="txtPotenciaRes">
-                    Resposta:
-                </p><hr>
+                    
+                </p>
             </div>
             <div class="calculadora">
                 <h2>Tabuada</h2>
@@ -49,16 +49,26 @@
                 </div>
                 <ul id="txtResTabuada">
 
-                </ul><hr>
+                </ul>
                     
             </div>
             <div class="calculadora">
                 <h2>Raiz Quadrada</h2>
                 <p>Digite um número:<input type="number"  id="txtraiz"></p>
-                <input type="button" value="Calcular" class ="button"onclick="calcularRaiz()">
-                <p id="raizRes">Resultado:</p><hr>
+                <input type="button" value="Calcular" class ="button" onclick="calcularRaiz()">
+                <p id="raizRes"> </p>
             </div>
-        </section>
+            <div class="calculadora">
+                <h2>Contador</h2>
+                <p>Início:<input type="number"  id="inicio" value="1"></p>
+                <p>Passo:<input type="number"  id="passo" value="1"></p>
+                <p>Fim:<input type="number"  id="fim" value="10"></p>
+                <input type="button" value="Mostrar" class ="button" onclick="contador()">
+                <ul id="contres">
+
+                </ul>
+            </div>
+        
        
         
     </main>
