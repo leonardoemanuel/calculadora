@@ -5,17 +5,51 @@
     margin:0px ;
     font-family: 'Fredoka', sans-serif; 
 }
+:root{
+    --cor1:#0b3c5d;
+    --hover:#2b75a7;
+    --cor2:#328cc1;
+    --cor3:#D9B310;
+    --cor4:#c7c7c7;
+    
+}
 header{
-    background-color: #c7c7c7;
+    background-color: var(--cor1);
     padding: 20px;
+   
   
 }
 header h1{
-    color: black;
+    color: white;
     padding: 10px;
     display: flex;
     align-items: center;
 
+}
+/*barra de navegação*/
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: .6rem;
+    background-color: var(--cor1);
+    top: 0;
+    position: sticky;
+   
+}
+nav a{
+    flex: 1;
+    padding: 5px;
+    font-size: 1.3em;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background-color: var(--cor1);
+    
+}
+nav a:hover{
+    background-color: var(--hover);
 }
 /*conteudoprincpal*/
 main{
@@ -29,13 +63,13 @@ div.calculadora{
     margin: 20px auto;
     display: flex;
     flex-direction: column;
-    border: 2px solid #2d2dfc;
+    border: 2px solid var(--cor2);
 }
 div.calculadora:nth-child(2n) h2{
-    background-color:#2ECC71;
+    background-color:var(--cor3);
 }
 div.calculadora:nth-child(2n){
-    border: 2px solid #2ECC71;
+    border: 2px solid var(--cor3);
 }
 .calculadora p{
     font-size: 1.3em;
@@ -52,7 +86,7 @@ div.calculadora:nth-child(2n){
     font-size: 1.9em;
     padding: 10px;
     color: white;
-    background-color: #2d2dfc;
+    background-color: var(--cor2);
 }
 .calculadora .button{
     display: block;
@@ -63,7 +97,10 @@ div.calculadora:nth-child(2n){
     border-radius: 30px;
     border: none;
     font-size: 1.3em;
-    background-color: #c7c7c7;
+    background-color: var(--cor4);
+}
+.calculadora .button:hover{
+    cursor: pointer;
 }
 .calculadora li{
     text-align: left;
@@ -92,13 +129,20 @@ div.calculadora:nth-child(2n){
     border-radius: 30px;
     border: none;
     font-size: 1.3em;
-    background-color: #c7c7c7;
+    background-color: var(--cor4);
+}
+.buttonMedia {
+    border-radius: 30px;
+    border: none;
+    font-size: 1em;
+    background-color: var(--cor4);
+    padding: 0px 2px;
 }
 /*footer*/
 footer {
     padding: 10px;
     height:auto;
-    background-color:#c7c7c7;
+    background-color:var(--cor4);
     display:flex;
     flex-direction:column;
     text-align:center;

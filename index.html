@@ -9,12 +9,21 @@
     <title>Multi Calculadora</title>
 </head>
 <body>
-    <header>
-        <h1>Multi Calculadora<img src="imagens/icons8-calculadora-50.png" ></h1>
+    <header id="headerbar">
+        <h1>Multi Calculadora</h1>
     </header>
+    <nav>
+       <a href="#headerbar">Equação</a>
+       <a href="#divEquacao">Potenciação</a>
+       <a href="#divPot" >Tabuada</a>
+       <a href="#divTab" >Raiz</a>
+       <a href="#divRaiz" >Contador</a>
+       <a href="#divMedia" >Media</a>
+
+    </nav>
     <main>
         
-            <div class="calculadora">
+            <div class="calculadora" id="divEquacao">
                 <h2>
                     Equação de 2º grau:
                 </h2>
@@ -27,7 +36,7 @@
                
                </p>
             </div>
-            <div class="calculadora">
+            <div class="calculadora" id="divPot">
                 <h2>Potenciação</h2>
                 <p>Digite a base: <input type="number"  id="txtbase"></p>
                 <p>Digite o expoente: <input type="number" id="txtexpoente"></p>
@@ -36,7 +45,7 @@
                     
                 </p>
             </div>
-            <div class="calculadora">
+            <div class="calculadora" id="divTab">
                 <h2>Tabuada</h2>
                 <p>Digite um número: <input type="number" id="tabuadanumber"></p>
                 <p> Inicio: <input type="number" id="tabuadaInicio" value="0" /></p>
@@ -53,13 +62,13 @@
                 </ul>
                     
             </div>
-            <div class="calculadora">
+            <div class="calculadora" id="divRaiz">
                 <h2>Raiz Quadrada</h2>
                 <p>Digite um número: <input type="number"  id="txtraiz"></p>
                 <input type="button" value="Calcular" class ="button" onclick="calcularRaiz()">
                 <p id="raizRes"> </p>
             </div>
-            <div class="calculadora">
+            <div class="calculadora" id="divMedia">
                 <h2>Contador</h2>
                 <p>Início: <input type="number"  id="inicio" value="1"></p>
                 <p>Passo: <input type="number"  id="passo" value="1"></p>
@@ -69,7 +78,16 @@
 
                 </ul>
             </div>
+            <div class="calculadora" id="divMedia">
+                <h2>Média</h2>
+                <p>Valor:
+                    <input type="number" id="numeroMedia"><input type="button" value="Adicionar" onclick="adicionarMedia()" class="buttonMedia"><input type="button" value="Cancelar" onclick="cancelarMedia()"  class="buttonMedia">
+                </p>
+               <p id="resultadoMedia"></p>
+                
+            </div>
     </main>
+    
     <footer>
         <p>Desenvolvido por <a href="https://www.instagram.com/leonardo_dev_/?hl=pt-br" target="_blank">Leonardo Emanuel</a></p>
     </footer>

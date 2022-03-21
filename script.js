@@ -68,7 +68,8 @@ let tabuadaop=''
         resultadoTabuada.style.columns='2'
         while(tabuadaop<fator.value){
         tabuadaop+=1
-        resultadoTabuada.innerHTML+=`<li>${numero.value}&#215;${tabuadaop}=${numero.value*tabuadaop}</li>`}
+        let totalRes=Number(numero.value)*Number(tabuadaop)
+        resultadoTabuada.innerHTML+=`<li>${numero.value}&#215;${tabuadaop}=${totalRes}</li>`}
         
         
     }
@@ -79,7 +80,8 @@ let tabuadaop=''
     
         while(tabuadaop<fator.value){
             tabuadaop+=1
-            resultadoTabuada.innerHTML+=`<li>${numero.value}+${tabuadaop}=${Number(numero.value)+Number(tabuadaop)}</li>`
+            let totalRes=Number(numero.value)+Number(tabuadaop)
+            resultadoTabuada.innerHTML+=`<li>${numero.value}+${tabuadaop}=${totalRes.toFixed()}</li>`
         }
        
     }
@@ -89,7 +91,8 @@ let tabuadaop=''
         resultadoTabuada.style.columns='2'
         while(tabuadaop<fator.value){
             tabuadaop+=1
-            resultadoTabuada.innerHTML+=`<li>${numero.value}-${tabuadaop}=${numero.value-tabuadaop}</li>`
+            let totalRes=Number(numero.value)-Number(tabuadaop)
+            resultadoTabuada.innerHTML+=`<li>${numero.value}-${tabuadaop}=${totalRes}</li>`
         }
         
     }
@@ -99,7 +102,8 @@ let tabuadaop=''
         resultadoTabuada.style.columns='1'
         while(tabuadaop<fator.value){
             tabuadaop+=1
-            resultadoTabuada.innerHTML+=`<li>${numero.value}:${tabuadaop}=${numero.value/tabuadaop}</li>`
+            let totalRes=Number(numero.value)/Number(tabuadaop)
+            resultadoTabuada.innerHTML+=`<li>${numero.value}:${tabuadaop}=${totalRes.toFixed(3)}</li>`
         }
         
     }
@@ -109,7 +113,8 @@ let tabuadaop=''
         resultadoTabuada.style.columns='2'
         while(tabuadaop<fator.value){
             tabuadaop+=1
-            resultadoTabuada.innerHTML+=`<li>${numero.value}^${tabuadaop}=${numero.value**tabuadaop}</li>`
+            let totalRes=Number(numero.value)**Number(tabuadaop)
+            resultadoTabuada.innerHTML+=`<li>${numero.value}^${tabuadaop}=${totalRes}</li>`
         }
     }
 /*Raiz Quadrada*/
@@ -143,6 +148,71 @@ function contador(){
         }
     }
 }
+let numeros=[] 
+let resultadoMedia=document.getElementById('resultadoMedia')
+let numeroMedia=document.getElementById('numeroMedia')
+function adicionarMedia(){
+    numeros.push(Number(numeroMedia.value))
+    let total=0
+    for(let i=0;i<numeros.length;i++){
+        total += numeros[i]
+        let totalMedia=total/numeros.length
+        resultadoMedia.innerHTML=`A media entre ${numeros} = ${totalMedia}`
+    }
+    
+    resultadoMedia.innerHTML=`A media entre ${numeros} = ${totalMedia}`
+    
+}
+
+function cancelarMedia(){
+    for(let i=numeros.length;i>=0;i--){
+        numeros.pop()
+    }
+    resultadoMedia.innerHTML=''
+}
+/*funçoes de retorno*/
+/*
+function retornoRaiz(){
+    window.scrollTo({
+        top:1050,
+        behavior: 'smooth'
+    })
+}
+function retornoEquaçao(){
+    window.scroll({
+        top:0,
+        behavior: 'smooth'
+    })
+}
+function retornPot(){
+    window.scrollTo({
+        top:400,
+        behavior: 'smooth'
+    })
+}
+function retornoTab(){
+    window.scrollTo({
+        top:700,
+        behavior: 'smooth'
+    })
+}
+function retornoCont(){
+    window.scrollTo({
+        top:1300,
+        behavior: 'smooth'
+    })
+}
+function retornoMedia(){
+    window.scrollTo({
+        top:1400,
+        behavior: 'smooth'
+    })
+}
+*/
+
+
+
+
 
        
     
