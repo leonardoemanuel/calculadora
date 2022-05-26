@@ -12,16 +12,16 @@ function calcularEquaçao(){
     let solucao2=-valorB.value-raizQuadrada
     let totalsolucao2=solucao2/(2*valorA.value)
     
-    let sinalMenos='-'
+    /*let sinalMenos='-'
     if(valorB.value.includes('-')){
         sinalMenos=''
-    }
+    }*/
     
-    let equaçaoEscrita=`<sup>${sinalMenos}${valorB.value}&plusmn;&radic;${valorB.value}&sup2;-4&#215;${valorA.value}&#215;${valorC.value}</sup>/<sub>2&#215;${valorA.value}=</sub><br>
-    <sup>${sinalMenos}${valorB.value}&plusmn;&radic;${valorB.value**2}-${4*valorA.value*valorC.value}</sup>/<sub>2&#215;${valorA.value}=</sub><br>
-    <sup>${sinalMenos}${valorB.value}&plusmn;&radic;${delta}</sup>/<sub>2&#215;${valorA.value}=</sub><br>
-    <sup>${sinalMenos}${valorB.value}-${raizQuadrada}</sup>/<sub>${2*valorA.value}=${totalsolucao1}</sub><br>
-    <sup>${sinalMenos}${valorB.value}+${raizQuadrada}</sup>/<sub>${2*valorA.value}=${totalsolucao2}</sub><br>`
+    let equaçaoEscrita=`<sup>${-1*valorB.value}&plusmn;&radic;${valorB.value}&sup2;-4&#215;${valorA.value}&#215;${valorC.value}</sup>/<sub>2&#215;${valorA.value}=</sub><br>
+    <sup>${-1*valorB.value}&plusmn;&radic;${valorB.value**2}-${4*valorA.value*valorC.value}</sup>/<sub>${2*valorA.value}=</sub><br>
+    <sup>${-1*valorB.value}&plusmn;&radic;${delta}</sup>/<sub>${2*valorA.value}=</sub><br>
+    <sup>${-1*valorB.value}-${raizQuadrada}</sup>/<sub>${2*valorA.value}=${totalsolucao1}</sub><br>
+    <sup>${-1*valorB.value}+${raizQuadrada}</sup>/<sub>${2*valorA.value}=${totalsolucao2}</sub><br>`
     
     if(valorA.value.length==0){
         alert("Preencha todos os campos corretamente")
