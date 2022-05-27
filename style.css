@@ -5,6 +5,9 @@
     margin:0px ;
     font-family: 'Fredoka', sans-serif; 
 }
+body{
+    background-color:white;
+}
 :root{
     --cor1:#0b3c5d;
     --hover:#2b75a7;
