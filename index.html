@@ -4,95 +4,92 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/screen.css">
     <link rel="shortcut icon" href="imagens/icons8-calculadora-50.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <title>Multi Calculadora</title>
 </head>
-<body>
+<body onresize="mudouTamanho()">
     <header id="headerbar">
         <h1>Multi Calculadora</h1>
     </header>
-    <nav>
-       <a href="#headerbar">Equação</a>
-       <a href="#divEquacao">Potenciação</a>
-       <a href="#divPot" >Tabuada</a>
-       <a href="#divTab" >Raiz</a>
-       <a href="#divRaiz" >Contador</a>
-       <a href="#divMedia" >Média</a>
-
+    <i class="material-symbols-outlined" id="iconMenu" onclick="abrirMenu()">Menu</i>
+    <nav id="navegacao">
+       <a href="#" onclick="equacao()">Equação</a>
+       <a href="#" onclick="potencia()">Potenciação</a>
+       <a href="#" onclick="tab()">Tabuada</a>
+       <a href="#" onclick="raiz()">Raiz</a>
+       <a href="#" onclick="cont()">Contador</a>
+       <a href="#" onclick="media()">Média</a>
     </nav>
     <main>
-        
-            <div class="calculadora" id="divEquacao">
-                <h2>
-                    Equação de 2º grau:
-                </h2>
-                <p>Digite o valor de A: <input type="number"  id="txtvalorA"></p>
-                <p>Digite o valor de B: <input type="number"  id="txtvalorB"></p>
-                <p>Digite o valor de C: <input type="number"  id="txtvalorC"></p>
-                <input type="button" value="Calcular" class="button" onclick="calcularEquaçao()">
-               <p id="txtresultado">
-                <br>
-               
-               </p>
+        <div class="calculadora" id="divEquacao">
+            <h2>
+                Equação de 2º grau:
+            </h2>
+            <p>Digite o valor de A: <input type="number"  id="txtvalorA"></p>
+            <p>Digite o valor de B: <input type="number"  id="txtvalorB"></p>
+            <p>Digite o valor de C: <input type="number"  id="txtvalorC"></p>
+            <input type="button" value="Calcular" class="button" onclick="calcularEquaçao()">
+            <p id="txtresultado"></p>
+        </div>
+        <div class="calculadora" id="divPot">
+            <h2>Potenciação</h2>
+            <p>Digite a base: <input type="number"  id="txtbase"></p>
+            <p>Digite o expoente: <input type="number" id="txtexpoente"></p>
+            <input type="button" value="Calcular" class="button" onclick="calcularPotencia()">
+            <p id="txtPotenciaRes"></p>
+        </div>
+        <div class="calculadora" id="divTab">
+            <h2>Tabuada</h2>
+            <p>Digite um número: <input type="number" id="tabuadanumber"></p>
+            <p> Inicio: <input type="number" id="tabuadaInicio" value="0" /></p>
+            <p> Fim: <input type="number" id="tabuadaFim" value="10"></p>
+            <div class="container">
+                <input type="button" value="Subtração" class="buttonflex" onclick="subtracao()">
+                <input type="button" value="Adição" class="buttonflex" onclick="adicao()">
+                <input type="button" value="Divisão" class="buttonflex" onclick="divisao()">
+                <input type="button" value="Multiplicação" class="buttonflex" onclick="multiplicacao()">
+                <input type="button" value="Exponenciação" class="buttonflex" onclick="expotenciacao()">
             </div>
-            <div class="calculadora" id="divPot">
-                <h2>Potenciação</h2>
-                <p>Digite a base: <input type="number"  id="txtbase"></p>
-                <p>Digite o expoente: <input type="number" id="txtexpoente"></p>
-                <input type="button" value="Calcular" class="button" onclick="calcularPotencia()">
-                <p id="txtPotenciaRes">
-                    
-                </p>
-            </div>
-            <div class="calculadora" id="divTab">
-                <h2>Tabuada</h2>
-                <p>Digite um número: <input type="number" id="tabuadanumber"></p>
-                <p> Inicio: <input type="number" id="tabuadaInicio" value="0" /></p>
-                <p> Fim: <input type="number" id="tabuadaFim" value="10"></p>
-                <div class="container">
-                    <input type="button" value="Subtração" class="buttonflex" onclick="subtracao()">
-                    <input type="button" value="Adição" class="buttonflex" onclick="adicao()">
-                    <input type="button" value="Divisão" class="buttonflex" onclick="divisao()">
-                    <input type="button" value="Multiplicação" class="buttonflex" onclick="multiplicacao()">
-                    <input type="button" value="Exponenciação" class="buttonflex" onclick="expotenciacao()">
-                </div>
-                <ul id="txtResTabuada">
-
-                </ul>
-                    
-            </div>
-            <div class="calculadora" id="divRaiz">
-                <h2>Raiz Quadrada</h2>
-                <p>Digite um número: <input type="number"  id="txtraiz"></p>
-                <input type="button" value="Calcular" class ="button" onclick="calcularRaiz()">
-                <p id="raizRes"> </p>
-            </div>
-            <div class="calculadora" id="divMedia">
-                <h2>Contador</h2>
-                <p>Início: <input type="number"  id="inicio" value="1"></p>
-                <p>Passo: <input type="number"  id="passo" value="1"></p>
-                <p>Fim: <input type="number"  id="fim" value="10"></p>
-                <input type="button" value="Mostrar" class ="button" onclick="contador()">
-                <ul id="contres">
-
-                </ul>
-            </div>
-            <div class="calculadora" id="divMedia">
-                <h2>Média</h2>
-                <p>Valor:
-                    <input type="number" id="numeroMedia"><input type="button" value="Adicionar" onclick="adicionarMedia()" class="buttonMedia"><input type="button" value="Cancelar" onclick="cancelarMedia()"  class="buttonMedia">
-                </p>
-               <p id="resultadoMedia"></p>
+            <ul id="txtResTabuada"></ul>
                 
-            </div>
+        </div>
+        <div class="calculadora" id="divRaiz">
+            <h2>Raiz Quadrada</h2>
+            <p>Digite um número: <input type="number"  id="txtraiz"></p>
+            <input type="button" value="Calcular" class ="button" onclick="calcularRaiz()">
+            <p id="raizRes"> </p>
+        </div>
+        <div class="calculadora" id="divCont">
+            <h2>Contador</h2>
+            <p>Início: <input type="number"  id="inicio" value="1"></p>
+            <p>Passo: <input type="number"  id="passo" value="1"></p>
+            <p>Fim: <input type="number"  id="fim" value="10"></p>
+            <input type="button" value="Mostrar" class ="button" onclick="contador()">
+            <ul id="contres"></ul>
+        </div>
+        <div class="calculadora" id="divMedia">
+            <h2>Média</h2>
+            <p>Valor:
+                <input type="number" id="numeroMedia"><input type="button" value="Adicionar" onclick="adicionarMedia()" class="buttonMedia"><input type="button" value="Cancelar" onclick="cancelarMedia()"  class="buttonMedia">
+            </p>
+            <p id="resultadoMedia"></p>
+        </div>
     </main>
-    
     <footer>
         <p>Desenvolvido por <a href="https://www.instagram.com/leonardo_dev_/?hl=pt-br" target="_blank">Leonardo Emanuel</a></p>
     </footer>
-
-
-    <script src="script.js"></script>
+    
+    <script src="script/nav.js"></script>
+    <script src="script/contador.js"></script>
+    <script src="script/media.js"></script>
+    <script src="script/raiz.js"></script>
+    <script src="script/tabuada.js"></script>
+    <script src="script/potencia.js"></script>
+    <script src="script/equacao.js"></script>
+    <script src="script/script.js"></script>
+    <script src="script/index.js"></script>
 </body>
 </html>
