@@ -5,7 +5,7 @@ let divRaiz = document.getElementById('divRaiz')
 let divCont = document.getElementById('divCont')
 let divMedia = document.getElementById('divMedia')
 let divNav = [divEq,divPot,divTab,divRaiz,divCont,divMedia]
-
+divNav[0].style.display = 'flex'
 function equacao(){
     divNav[0].style.display = 'flex'
     divNav[1].style.display = 'none'
