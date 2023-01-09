@@ -28,7 +28,7 @@ function calcularEquaçao(){
         Resposta:${totalsolucao1}. Essa equação possui apenas uma solução`
     }else{
         txtresult.innerHTML=`${equaçaoEscrita}
-        Resposta:${totalsolucao1.toFixed(3)},${totalsolucao2.toFixed(3)}. Essa equação possui duas soluções`
+        Resposta:${totalsolucao1},${totalsolucao2}. Essa equação possui duas soluções`
     }
     
 

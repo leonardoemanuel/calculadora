@@ -1,7 +1,14 @@
 @charset "UTF-8";
-@media screen and (min-width : 780px) {
+@media screen and (min-width : 1025px) {
     #iconMenu{
+
         display: none;
+    }
+    div.calculadora{
+        width: 80vw;
+    }
+    div.calculadora h2{
+        width: 100%;
     }
     nav{
         display: flex;
@@ -10,5 +17,8 @@
     }
     nav a {
         flex: 1;
+    }
+    footer{
+        font-size: 1em;
     }
 }
